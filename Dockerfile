@@ -9,7 +9,7 @@ RUN apt-get update -y && \
     apt-get install -y \
     build-essential \
     libpq-dev \
-    ruby-full=1:3.0.0* \
+    ruby-full=3.0.0* \
     ruby-dev \
     zlib1g-dev
 
