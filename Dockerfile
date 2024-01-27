@@ -9,5 +9,9 @@ COPY Gemfile Gemfile.lock ./
 
 # Install bundle and dependencies
 RUN gem install bundler && bundle install
-RUN bundle exec cucumber
 
+# Copy the entire project directory to the container
+COPY . /app
+
+# Run Cucumber tests
+RUN bundle exec cucumber
