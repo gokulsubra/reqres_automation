@@ -11,4 +11,3 @@ COPY Gemfile Gemfile.lock ./
 RUN gem install bundler && bundle install
 RUN bundle exec cucumber
 
-
