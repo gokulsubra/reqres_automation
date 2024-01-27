@@ -9,7 +9,7 @@ COPY Gemfile Gemfile.lock ./
 # Install bundle and dependencies
 RUN gem install bundler && bundle install
 
-
+COPY . /app
 
 # Run Cucumber tests
 RUN bundle exec cucumber
