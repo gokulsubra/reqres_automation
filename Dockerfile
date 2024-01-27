@@ -2,14 +2,14 @@
 FROM ruby:3.0.0
 
 
-
+WORKDIR /app
 # Copy Gemfile and Gemfile.lock to the container
 COPY Gemfile Gemfile.lock ./
 
 # Install bundle and dependencies
 RUN gem install bundler && bundle install
 
-COPY . /app
+#COPY . /app
 
 # Run Cucumber tests
 RUN bundle exec cucumber
