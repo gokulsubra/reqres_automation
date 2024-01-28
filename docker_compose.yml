@@ -7,4 +7,4 @@ services:
     ports:
       - "3000:3000"
     working_dir: /app
-    command: bundle exec cucumber
+    command: ["bash", "-lc", "bundle exec cucumber"]
