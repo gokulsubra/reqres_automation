@@ -34,4 +34,4 @@ RUN /bin/bash -l -c "bundle install"
 COPY . .
 
 # Run Cucumber tests
-CMD ["bash", "-lc", "bundle exec cucumber"]
+CMD /bin/bash -l -c "export PATH=$PATH:/usr/local/rvm/rubies/ruby-3.3.0/bin && bundle exec cucumber"
