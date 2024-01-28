@@ -34,4 +34,4 @@ RUN /bin/bash -l -c "bundle install"
 COPY . .
 
 # Run Cucumber tests
-CMD ["bundle", "exec", "cucumber"]
+CMD ["/bin/bash", "-l", "-c", "bundle exec cucumber"]
