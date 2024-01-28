@@ -2,7 +2,7 @@
 FROM ruby:3.0.0
 
 RUN apt-get update && \
-    apt-get install -y build-essential libpq-dev
+    apt-get install -y build-essential libffi-dev
 
 # Copy Gemfile and Gemfile.lock to the container
 COPY Gemfile Gemfile.lock ./
