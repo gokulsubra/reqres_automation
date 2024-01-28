@@ -4,7 +4,6 @@ FROM ubuntu:20.04
 # Set the working directory in the container
 WORKDIR /app
 
-ENV CACHEBUST=$(date)
 
 # Update package lists and install necessary dependencies
 RUN apt-get update -y && \
