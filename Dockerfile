@@ -7,6 +7,8 @@ COPY Gemfile Gemfile.lock ./
 # Install system dependencies for building native extensions
 RUN apt-get update && \
     apt-get install -y build-essential libffi-dev
+    
+RUN apt-get install -y libxml2-dev libxslt1-dev zlib1g-dev
 
 
 # Install bundle and dependencies
