@@ -13,10 +13,10 @@ RUN apt-get update && \
 
 # Install bundle and dependencies
 RUN gem install bundler
-RUN bundle config --global jobs "$(nproc)" && bundle install
+RUN bundle install
 
 # Copy the entire project directory to the container
 COPY . .
 
 # Run Cucumber tests
-CMD ["bundle", "exec", "cucumber"]
+RUN bundle exec cucumber
