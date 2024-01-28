@@ -19,7 +19,7 @@ RUN gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys 409B6B1796C275462A170
 RUN \curl -sSL https://get.rvm.io | bash -s stable
 
 # Install Ruby 3.0.0 using RVM
-RUN /bin/bash -l -c "rvm install 3.0.0"
+RUN /bin/bash -l -c "rvm install ruby-3.0.0"
 
 # Install bundler
 RUN /bin/bash -l -c "gem install bundler"
