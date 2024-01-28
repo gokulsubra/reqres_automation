@@ -1,5 +1,5 @@
 # Use an official Ruby runtime as a parent image
-FROM ruby:3.0.0
+FROM ruby:3.0.0-slim
 
 # Copy Gemfile and Gemfile.lock to the container
 COPY Gemfile Gemfile.lock ./
@@ -7,6 +7,7 @@ COPY Gemfile Gemfile.lock ./
 # Install system dependencies for building native extensions
 RUN apt-get update && \
     apt-get install -y build-essential libffi-dev
+
 
 # Install bundle and dependencies
 RUN gem install bundler
