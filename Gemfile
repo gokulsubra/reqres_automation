@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
 
 gem 'cucumber'
-gem 'ffi'
+gem 'ffi', '1.15.0'
+
